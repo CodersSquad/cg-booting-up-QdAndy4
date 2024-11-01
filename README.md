@@ -21,15 +21,32 @@ This lab stands to prepare the moderngl development environment. Below the steps
 ## How to run your program
 
 ```
-# Update this section with instructions on how to run your programs. 
+# Install Python if not already installed
+sudo apt update
+sudo apt install python3 python3-pip python3-venv -y
 
-# Consider that these instructions will be executed 
-in a completely new linux-based machine (Ubuntu 22.04),
-so, instructions for dependencies installation must be added.
+# Check Python version
+python3 --version
 
-# It's highly recommended to use python virtual envs. 
-You may take a look on:
-https://docs.python.org/3/library/venv.html
+# Create and activate a virtual environment
+python3 -m venv env
+source env/bin/activate
+
+# Install dependencies from requirements.txt or manually
+pip install -r requirements.txt || pip install moderngl pygame pillow objloader
+
+# Run the script s
+python 01_hello_world.py
+python 06_multiple_objects.py
+python 09_models_and_images.py
+
+
+# Deactivate the virtual environment when done
+deactivate
+
+# Reference for Python virtual environments:
+# https://docs.python.org/3/library/venv.html
+
 ```
 
 ## Grading Policy
